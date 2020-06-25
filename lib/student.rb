@@ -1,4 +1,5 @@
 class Student
+  attr_accessor :name, :grade
 
 def self.create_table
   sql = <<-SQL
