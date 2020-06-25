@@ -28,6 +28,10 @@ def self.create_table
  end 
  
  def save
-   
+   sql = <<-SQL
+     INSERT INTO students(name,grade)
+     VALUES(?,?)
+   SQL
+   @id = DB[:conn]execute("SELECT last_inserted_rowid() FROM students")[0][0]
  end 
 end
