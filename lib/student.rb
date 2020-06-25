@@ -20,5 +20,7 @@ def self.create_table
   #  with DB[:conn]
  end 
  
- 
+ def self.drop_table
+   
+ end 
 end
